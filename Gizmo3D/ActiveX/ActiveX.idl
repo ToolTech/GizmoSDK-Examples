@@ -1,0 +1,172 @@
+// *****************************************************************************
+// File			: ActiveX.idl
+// Module		: 
+// Description	: IDL source for ActiveX.dll
+// Author		: Anders Modén          
+// Product		: Gizmo3D 1.2
+//              
+// Copyright © 2003- Saab Training Systems AB, Sweden
+//                      
+// NOTE:	Gizmo3D is a high performance 3D Scene Graph and effect visualisation 
+//			C++ toolkit for Linux, Mac OS X, Windows (Win32) and IRIX® for  
+//			usage in Game or VisSim development.
+//
+//
+// Revision History...                                                  
+//                                                                      
+// Who  Date    Description                                             
+//                                                                      
+// AMO  030420  Created file    
+//
+// ******************************************************************************
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ActiveX.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+
+	[
+		object,
+		uuid(18E54A1D-794B-4025-9003-1DBAE8C13149),
+		dual,
+		helpstring("IgzSceneCom Interface"),
+		pointer_default(unique)
+	]
+	interface IgzSceneCom : IDispatch
+	{
+		[id(1), helpstring("method loadURL")] HRESULT loadURL([in] BSTR url);
+		[id(2), helpstring("method setScale")] HRESULT setScale([in] float scale);
+		[id(3), helpstring("method useAutoScale")] HRESULT useAutoScale([in] int on);
+	};	
+
+	[
+		object,
+		uuid(236FCBD5-41AA-443B-AB75-4E983154FD73),
+		dual,
+		helpstring("IgzCameraCom Interface"),
+		pointer_default(unique)
+	]
+	interface IgzCameraCom : IDispatch
+	{
+		[id(1), helpstring("method lookAt")] HRESULT lookAt([in] float x , [in] float y , [in] float z);
+		[id(2), helpstring("method setScene")] HRESULT setScene([in] IgzSceneCom *scene);
+		[id(3), helpstring("method setPosition")] HRESULT setPosition([in] float x , [in] float y , [in] float z);
+		[id(4), helpstring("method setNearFar")] HRESULT setNearFar([in] float nearDist , [in] float farDist);
+	};
+
+	[
+		object,
+		uuid(2BD92FD2-B729-475A-9185-B54EBC668E8E),
+		dual,
+		helpstring("IgzWindowCom Interface"),
+		pointer_default(unique)
+	]
+	interface IgzWindowCom : IDispatch
+	{
+		[id(1), helpstring("method setCamera")] HRESULT setCamera([in] IgzCameraCom *camera);
+		[id(2), helpstring("method setRefreshRate")] HRESULT setRefreshRate([in] float hz);
+		[id(3), helpstring("method activateGizmoWindow")] HRESULT activateGizmoWindow();
+	};
+
+[
+	uuid(73511247-BE5B-4605-A7BB-A82D215BFBAB),
+	version(1.0),
+	helpstring("Gizmo3D ActiveX 1.0 Type Library")
+]
+library ACTIVEXLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(11EBA935-35DF-41AC-8D2D-31EDEE13A559),
+		helpstring("_IgzWindowComEvents Interface")
+	]
+	dispinterface _IgzWindowComEvents
+	{
+		properties:
+		methods:
+	};
+	
+
+	[
+		uuid(08A221F7-A885-430B-AC79-0F243E538207),
+		helpstring("gzWindowCom Class")
+	]
+	coclass gzWindowCom
+	{
+		[default] interface IgzWindowCom;
+		[default, source] dispinterface _IgzWindowComEvents;
+	};
+	[
+		uuid(895CF0EF-FCEF-4CBC-9189-2D67E4616D97),
+		helpstring("_IgzCameraComEvents Interface")
+	]
+	dispinterface _IgzCameraComEvents
+	{
+		properties:
+		methods:
+	};
+	
+
+	[
+		uuid(AAC8AAED-65C3-4BCE-B2AF-BF10127C39A3),
+		helpstring("gzCameraCom Class")
+	]
+	coclass gzCameraCom
+	{
+		[default] interface IgzCameraCom;
+		[default, source] dispinterface _IgzCameraComEvents;
+	};
+	[
+		uuid(8CABDF39-1732-4DB9-BDE9-42AE88A575B1),
+		helpstring("_IgzSceneComEvents Interface")
+	]
+	dispinterface _IgzSceneComEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		object,
+		uuid(D4E41D14-F38E-4F42-99C1-41389B456573),
+		dual,
+		helpstring("IgzMessageCom Interface"),
+		pointer_default(unique)
+	]
+	interface IgzMessageCom : IDispatch
+	{
+	};
+
+	[
+		uuid(2B9CFD7F-E090-458B-9D20-51777929AC2D),
+		helpstring("gzSceneCom Class")
+	]
+	coclass gzSceneCom
+	{
+		[default] interface IgzSceneCom;
+		[default, source] dispinterface _IgzSceneComEvents;
+	};
+	[
+		uuid(E793E9DB-8A17-46C2-A414-83362A6CCE47),
+		helpstring("_IgzMessageComEvents Interface")
+	]
+	dispinterface _IgzMessageComEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method onMessage")] HRESULT onMessage([in] BSTR message , [in] BSTR sender , [in] long level);
+	};
+
+	[
+		uuid(AD297413-B3FC-4749-B17E-5B09FFA4511A),
+		helpstring("gzMessageCom Class")
+	]
+	coclass gzMessageCom
+	{
+		[default] interface IgzMessageCom;
+		[default, source] dispinterface _IgzMessageComEvents;
+	};
+};

@@ -1,0 +1,26 @@
+HKCR
+{
+	Gizmo3D.gzMessageCom.1 = s 'gzMessageCom Class'
+	{
+		CLSID = s '{AD297413-B3FC-4749-B17E-5B09FFA4511A}'
+	}
+	Gizmo3D.gzMessageCom = s 'gzMessageCom Class'
+	{
+		CLSID = s '{AD297413-B3FC-4749-B17E-5B09FFA4511A}'
+		CurVer = s 'Gizmo3D.gzMessageCom.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AD297413-B3FC-4749-B17E-5B09FFA4511A} = s 'gzMessageCom Class'
+		{
+			ProgID = s 'Gizmo3D.gzMessageCom.1'
+			VersionIndependentProgID = s 'Gizmo3D.gzMessageCom'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{73511247-BE5B-4605-A7BB-A82D215BFBAB}'
+		}
+	}
+}

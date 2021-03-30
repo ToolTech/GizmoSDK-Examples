@@ -1,0 +1,61 @@
+General requirements
+--------------------
+
+Linux:
+
+The Gizmo3D package requires at least MESA 3.0 libMesaGL.so
+or any equivalent implementation of OpenGL libGL.so.
+
+The Mesa libs should preferably be built with Multithread support and shared
+libs.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Irix:
+
+The Gizmo3D package support both N32 and O32 models. However yoy should contact
+ToolTech Software at sales@tooltech-software.com to get the O32 distribution
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Win32:
+
+The Gizmo3D package is today build by MS Visual C++ 6 or 7 but it works with
+earlier versions as well.
+
+The Debug version is build with Release libs of libC etc so you must look at
+the makefile.mak to get it properly set up
+
+Please note that the examples are shared between many systems and therefor the
+formatting of carriage-return and linefeed might get mixed.
+
+You should also note that the makefiles "Makefile" in each directory are for unix
+users. WIN32 users should use the command "nmake -f xxxx.mak" where xxx.mak is the
+Win32 makefile located in each example directory
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+Building examples
+-----------------
+
+Firs you need to setup your target environment. On Win32 platforms you use the XXX.mak file or the .dsw/.dsp projects.
+
+On unix systems you need to do a "make zzz" where zzz is your preferred platform (irix,linux,mac)
+
+Then you should setupo your system for debug or release builds. Do a "make zzz" where zzz is debug or release.
+
+ex.
+
+> make mac
+> make debug
+> make
+
+This will build your example...
+
+
+To clean you example you can use "make clean" or "make cleanall" where muliple targets are compiled
+
+
+

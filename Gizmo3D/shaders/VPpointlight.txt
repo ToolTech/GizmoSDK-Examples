@@ -1,0 +1,115 @@
+!!ARBvp1.0
+#*****************************************************************************
+# File		: VPpointlight.txt
+# Module		: 
+# Description	: Fixed function 1 point light replacement vertex program.
+# Author		: David Luotonen, Anders Modén		
+# Product		: Gizmo3D 1.1 Beta 51 (Shader)
+#		
+# Copyright © 2003- Saab Training Systems AB, Sweden
+#			
+# NOTE:	Gizmo3D is a high performance 3D Scene Graph and effect visualisation 
+#		C++ toolkit for Linux, Mac OS X, Windows (Win32) and IRIX® for  
+#		usage in Game or VisSim development.
+#
+#
+# Revision History...							
+#									
+# Who	Date	Description						
+#									
+# DLU	030715	Created file 	
+#
+#******************************************************************************
+
+OPTION ARB_position_invariant;
+
+PARAM m[4]={state.matrix.modelview};
+PARAM mvp[4]={state.matrix.mvp};
+PARAM mvinv[4]={state.matrix.modelview.invtrans};
+PARAM MA=state.material.ambient;
+PARAM MD=state.material.diffuse;
+PARAM ME=state.material.emission;
+PARAM MS=state.material.specular;
+PARAM MSh=state.material.shininess;
+PARAM AmbientColor0=state.lightprod[0].ambient;
+PARAM DiffuseColor0=state.lightprod[0].diffuse;
+PARAM SpecularColor0=state.lightprod[0].specular;
+PARAM Attenuation0=state.light[0].attenuation;
+PARAM SceneColor=state.lightmodel.scenecolor;
+PARAM LP0=state.light[0].position;
+PARAM CamPos=program.local[0];
+PARAM two={2.0,2.0,2.0,2.0};
+PARAM one={1.0,1.0,1.0,1.0};
+PARAM zero={0.0,0.0,0.0,0.0};
+
+ATTRIB iPos=vertex.position;
+ATTRIB iNormal=vertex.normal;
+ATTRIB iTex0=vertex.texcoord[0];
+
+OUTPUT oColor=result.color;
+OUTPUT oTex0=result.texcoord[0];
+
+TEMP r0, r1, r2, r3, EyeVertex, Len, att, ViewVector, r4, EyeCam;
+
+#Transform the vertex to eye space.
+DP4	EyeVertex.x, m[0], iPos;
+DP4	EyeVertex.y, m[1], iPos;
+DP4	EyeVertex.z, m[2], iPos;
+
+#Transform the normal to eye space.
+DP3	r0.x, mvinv[0], iNormal;
+DP3	r0.y, mvinv[1], iNormal;
+DP3	r0.z, mvinv[2], iNormal;
+
+#Transform Campos to eyespace
+DP4 EyeCam.x, m[0], CamPos;
+DP4 EyeCam.y, m[1], CamPos;
+DP4 EyeCam.z, m[2], CamPos;
+
+#Compute the view vector
+SUB ViewVector, EyeCam, EyeVertex;
+#Normalize.
+DP3 ViewVector.w, ViewVector, ViewVector;
+RSQ ViewVector.w, ViewVector.w;
+MUL ViewVector, ViewVector, ViewVector.w;
+
+#Renormalize the normal.
+DP3 r0.w, r0, r0;
+RSQ r0.w, r0.w;
+MUL r0, r0, r0.w;
+
+#Compute lighting by light 0
+#NOTE: The LIT instruction accelerates per-vertex lighting by computing lighting
+#      coefficients for ambient, diffuse, and specular light contributions.
+SUB	Len, LP0, EyeVertex;
+DP3	Len.w, Len, Len;
+RSQ	r1.w, Len.w;
+MUL	r1, Len, r1.w;			# r1 = normalized light vector
+DP3	r2.x, r0, r1;			# r2.x = normal dot lvec
+DP3 r3, r1, r0;
+MUL r3, r3, two;
+MAD r3, r3, r0, -r1;
+DP3 r2.y, r3, ViewVector;
+MOV	r2.w, MSh.x;
+LIT	r2, r2;
+
+#Attenuation
+MAD att, Attenuation0.z, Len.w, Attenuation0.x;
+RSQ Len.w, Len.w;
+RCP Len.w, Len.w;
+MAD att, Len.w, Attenuation0.y, att.x;
+RCP att, att.x;
+
+#Sum it up!
+MUL	r0.xyz, DiffuseColor0, r2.y;
+MAD r2, SpecularColor0, r2.z, AmbientColor0;
+ADD r0, r0, r2;
+MUL r0, r0, att.x;
+ADD r0, r0, SceneColor;
+ADD oColor.xyz, r0, ME;
+MOV oColor.w, MD.w;			# MOV transparency
+
+#Tex coord 0
+MOV	oTex0, iTex0;
+
+END

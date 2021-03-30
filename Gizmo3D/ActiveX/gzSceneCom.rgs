@@ -1,0 +1,26 @@
+HKCR
+{
+	Gizmo3D.gzSceneCom.1 = s 'gzSceneCom Class'
+	{
+		CLSID = s '{2B9CFD7F-E090-458B-9D20-51777929AC2D}'
+	}
+	Gizmo3D.gzSceneCom = s 'gzSceneCom Class'
+	{
+		CLSID = s '{2B9CFD7F-E090-458B-9D20-51777929AC2D}'
+		CurVer = s 'Gizmo3D.gzSceneCom.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2B9CFD7F-E090-458B-9D20-51777929AC2D} = s 'gzSceneCom Class'
+		{
+			ProgID = s 'Gizmo3D.gzSceneCom.1'
+			VersionIndependentProgID = s 'Gizmo3D.gzSceneCom'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{73511247-BE5B-4605-A7BB-A82D215BFBAB}'
+		}
+	}
+}

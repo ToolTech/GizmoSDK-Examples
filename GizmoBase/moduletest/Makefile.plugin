@@ -1,0 +1,14 @@
+
+sinclude buildflags
+sinclude compilerflags
+
+NAME = module1$(SO_EXT)
+FILES = module1.o 
+EDIR=./
+EXTRA_LINKOPTS=$(PLUGIN)
+
+sinclude ../Makefile.inc
+
+
+
+

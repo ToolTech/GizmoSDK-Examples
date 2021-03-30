@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rtti", "rtti.vcproj", "{56E9146B-54D7-4AB4-A592-3C9663801CB2}"
+EndProject
+Global
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectUniqueName0 = rtti.vcproj
+		SccLocalPath0 = .
+		CanCheckoutShared = true
+		SccProjectName1 = rtti
+		SccLocalPath1 = .
+		SccProvider1 = MSSCCI:ClearCase
+		CanCheckoutShared = true
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56E9146B-54D7-4AB4-A592-3C9663801CB2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{56E9146B-54D7-4AB4-A592-3C9663801CB2}.Debug|Win32.Build.0 = Debug|Win32
+		{56E9146B-54D7-4AB4-A592-3C9663801CB2}.Release|Win32.ActiveCfg = Release|Win32
+		{56E9146B-54D7-4AB4-A592-3C9663801CB2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

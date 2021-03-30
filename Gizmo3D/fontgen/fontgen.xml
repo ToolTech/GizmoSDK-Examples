@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fonts>
+  <font fontName="courier" charcterCount="256" genericHeight="11" genericWidth="0" italic="false" bold="false" underline="false" strikeout="false" antialias="false" />
+  <font fontName="arial" charcterCount="256" genericHeight="24" genericWidth="0" italic="false" bold="false" underline="false" strikeout="false" antialias="true" />
+  <font fontName="arial" charcterCount="256" genericHeight="24" genericWidth="0" italic="false" bold="false" underline="true" strikeout="false" antialias="true" />
+  <font fontName="arial" charcterCount="256" genericHeight="24" genericWidth="0" italic="false" bold="true" underline="false" strikeout="false" antialias="true" />
+  <font fontName="arial" charcterCount="256" genericHeight="24" genericWidth="0" italic="true" bold="false" underline="false" strikeout="false" antialias="true" />
+  <font fontName="dom casual" charcterCount="256" genericHeight="24" genericWidth="0" italic="false" bold="false" underline="false" strikeout="false" antialias="true" />
+  <font fontName="symbol" charcterCount="256" genericHeight="24" genericWidth="0" italic="false" bold="false" underline="false" strikeout="false" antialias="true" />
+  <font fontName="palace script mt" charcterCount="256" genericHeight="24" genericWidth="0" italic="false" bold="false" underline="false" strikeout="false" antialias="true" />
+</fonts>

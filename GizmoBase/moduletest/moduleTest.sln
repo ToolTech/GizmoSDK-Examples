@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "module1", "module1.vcproj", "{7A39C31D-1A5F-4953-8935-F43B955962E8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "moduleTest", "moduleTest.vcproj", "{5913600E-99BA-4EC7-96D1-6D605834C1FF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7A39C31D-1A5F-4953-8935-F43B955962E8} = {7A39C31D-1A5F-4953-8935-F43B955962E8}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A39C31D-1A5F-4953-8935-F43B955962E8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7A39C31D-1A5F-4953-8935-F43B955962E8}.Debug|Win32.Build.0 = Debug|Win32
+		{7A39C31D-1A5F-4953-8935-F43B955962E8}.Release|Win32.ActiveCfg = Release|Win32
+		{7A39C31D-1A5F-4953-8935-F43B955962E8}.Release|Win32.Build.0 = Release|Win32
+		{5913600E-99BA-4EC7-96D1-6D605834C1FF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5913600E-99BA-4EC7-96D1-6D605834C1FF}.Debug|Win32.Build.0 = Debug|Win32
+		{5913600E-99BA-4EC7-96D1-6D605834C1FF}.Release|Win32.ActiveCfg = Release|Win32
+		{5913600E-99BA-4EC7-96D1-6D605834C1FF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

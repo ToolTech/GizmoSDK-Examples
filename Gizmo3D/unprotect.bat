@@ -1,0 +1,1 @@
+attrib /S /D -R *.*

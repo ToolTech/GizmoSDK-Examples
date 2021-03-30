@@ -1,0 +1,26 @@
+HKCR
+{
+	Gizmo3D.gzCameraCom.1 = s 'gzCameraCom Class'
+	{
+		CLSID = s '{AAC8AAED-65C3-4BCE-B2AF-BF10127C39A3}'
+	}
+	Gizmo3D.gzCameraCom = s 'gzCameraCom Class'
+	{
+		CLSID = s '{AAC8AAED-65C3-4BCE-B2AF-BF10127C39A3}'
+		CurVer = s 'Gizmo3D.gzCameraCom.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AAC8AAED-65C3-4BCE-B2AF-BF10127C39A3} = s 'gzCameraCom Class'
+		{
+			ProgID = s 'Gizmo3D.gzCameraCom.1'
+			VersionIndependentProgID = s 'Gizmo3D.gzCameraCom'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{73511247-BE5B-4605-A7BB-A82D215BFBAB}'
+		}
+	}
+}

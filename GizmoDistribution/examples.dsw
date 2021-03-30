@@ -1,0 +1,246 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "gizmochat"=.\gizmochat\gizmochat.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    gizmochat
+    .\gizmochat
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "encoder"=.\encoder\encoder.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    encoder
+    .\encoder
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "evaluators"=.\evaluators\evaluators.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    evaluators
+    .\evaluators
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "helloevent"=.\helloevent\helloevent.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    helloevent
+    .\helloevent
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "helloobject"=.\helloobject\helloobject.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    helloobject
+    .\helloobject
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "hierarchy"=.\hierarchy\hierarchy.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    hierarchy
+    .\hierarchy
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "main"=.\main\main.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    main
+    .\main
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name evaluators
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name helloevent
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name helloobject
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name hierarchy
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ownership
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name server
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name subscriptions
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name transactions
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name GizmoChat
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name encoder
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name tcp
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ownership"=.\ownership\ownership.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    ownership
+    .\ownership
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "server"=.\server\server.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/test/FIA/dmtl+/server", EPDCAAAA
+    .\server
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "subscriptions"=.\subscriptions\subscriptions.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    subscriptions
+    .\subscriptions
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "tcp"=.\tcp\tcp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    tcp
+    .\tcp
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "transactions"=.\transactions\transactions.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    transactions
+    .\transactions
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    examples
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

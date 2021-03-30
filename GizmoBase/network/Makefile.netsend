@@ -1,0 +1,8 @@
+sinclude buildflags
+sinclude compilerflags
+
+NAME = netsend
+
+FILES = netsend.o  
+
+sinclude ../Makefile.inc

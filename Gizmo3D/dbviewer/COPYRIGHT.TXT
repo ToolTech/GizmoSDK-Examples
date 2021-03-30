@@ -1,0 +1,9 @@
+IMPORTANT !!
+
+The file anim.3ds is made by...
+
+David Markham Carter (C) 1998-
+motonerv@xnet.com
+
+The file esprit.pfb is converted from the esprit.flt found in the Performer
+share data directory. The pfconv utility was used to convert the file.

@@ -1,0 +1,34 @@
+HKCR
+{
+	Gizmo3D.gzWindowCom.1 = s 'gzWindowCom Class'
+	{
+		CLSID = s '{08A221F7-A885-430B-AC79-0F243E538207}'
+	}
+	Gizmo3D.gzWindowCom = s 'gzWindowCom Class'
+	{
+		CLSID = s '{08A221F7-A885-430B-AC79-0F243E538207}'
+		CurVer = s 'Gizmo3D.gzWindowCom.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {08A221F7-A885-430B-AC79-0F243E538207} = s 'gzWindowCom Class'
+		{
+			ProgID = s 'Gizmo3D.gzWindowCom.1'
+			VersionIndependentProgID = s 'Gizmo3D.gzWindowCom'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{73511247-BE5B-4605-A7BB-A82D215BFBAB}'
+			'Version' = s '1.0'
+		}
+	}
+}

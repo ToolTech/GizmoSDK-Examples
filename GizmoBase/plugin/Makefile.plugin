@@ -1,0 +1,12 @@
+sinclude  $(GIZMOSDK)/build/buildflags
+sinclude  $(GIZMOSDK)/build/compilerflags
+sinclude  $(GIZMOSDK)/build/libraryflags
+
+FILES = plugin.o
+
+TARGET = plugin$(SO_EXT)
+
+LINKOPTS=$(PLUGIN)
+
+include $(GIZMOSDK)/build/Makefile.inc
+

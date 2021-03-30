@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lod", "lod.vcproj", "{BFF2DAD4-D11B-4FFA-A11E-5F84CA96AF46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFF2DAD4-D11B-4FFA-A11E-5F84CA96AF46}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BFF2DAD4-D11B-4FFA-A11E-5F84CA96AF46}.Debug|Win32.Build.0 = Debug|Win32
+		{BFF2DAD4-D11B-4FFA-A11E-5F84CA96AF46}.Release|Win32.ActiveCfg = Release|Win32
+		{BFF2DAD4-D11B-4FFA-A11E-5F84CA96AF46}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

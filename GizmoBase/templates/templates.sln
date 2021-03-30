@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "templates", "templates.vcproj", "{9C496FE0-3A96-4764-B176-35F361A6B272}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C496FE0-3A96-4764-B176-35F361A6B272}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C496FE0-3A96-4764-B176-35F361A6B272}.Debug|Win32.Build.0 = Debug|Win32
+		{9C496FE0-3A96-4764-B176-35F361A6B272}.Release|Win32.ActiveCfg = Release|Win32
+		{9C496FE0-3A96-4764-B176-35F361A6B272}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,153 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gizmochat", "gizmochat\gizmochat.vcproj", "{ED3CF572-7C02-46EE-9C02-90C281AD1E91}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "encoder", "encoder\encoder.vcproj", "{B97A3020-8133-4A89-BB75-C1975D513733}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "evaluators", "evaluators\evaluators.vcproj", "{2213EAAE-CBDF-4100-966B-0444B40E531D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "helloevent", "helloevent\helloevent.vcproj", "{54E3D799-1A4C-4027-8E8B-887445CDAAD5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "helloobject", "helloobject\helloobject.vcproj", "{6713166B-4A0E-42A5-8352-CA45113F7D8D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hierarchy", "hierarchy\hierarchy.vcproj", "{4DB7E7F0-35CC-4430-BBFC-97AB3DB226A8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "main", "main\main.vcproj", "{43506181-A981-42D5-A3FE-AA18C077C757}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B97A3020-8133-4A89-BB75-C1975D513733} = {B97A3020-8133-4A89-BB75-C1975D513733}
+		{94D8A34F-5622-46DF-8E4D-53559191612B} = {94D8A34F-5622-46DF-8E4D-53559191612B}
+		{44EDAF5D-D838-4C62-8BC5-31BB9EF88D32} = {44EDAF5D-D838-4C62-8BC5-31BB9EF88D32}
+		{6713166B-4A0E-42A5-8352-CA45113F7D8D} = {6713166B-4A0E-42A5-8352-CA45113F7D8D}
+		{ED3CF572-7C02-46EE-9C02-90C281AD1E91} = {ED3CF572-7C02-46EE-9C02-90C281AD1E91}
+		{54E3D799-1A4C-4027-8E8B-887445CDAAD5} = {54E3D799-1A4C-4027-8E8B-887445CDAAD5}
+		{31342E9F-0BD6-4A78-8EC6-803A78FF5FF1} = {31342E9F-0BD6-4A78-8EC6-803A78FF5FF1}
+		{2213EAAE-CBDF-4100-966B-0444B40E531D} = {2213EAAE-CBDF-4100-966B-0444B40E531D}
+		{A37005B8-46A1-4399-B33D-6F6388E81B48} = {A37005B8-46A1-4399-B33D-6F6388E81B48}
+		{692A2FED-34A6-49B4-81BD-9D0A79F1EFF4} = {692A2FED-34A6-49B4-81BD-9D0A79F1EFF4}
+		{4DB7E7F0-35CC-4430-BBFC-97AB3DB226A8} = {4DB7E7F0-35CC-4430-BBFC-97AB3DB226A8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ownership", "ownership\ownership.vcproj", "{31342E9F-0BD6-4A78-8EC6-803A78FF5FF1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "server\server.vcproj", "{94D8A34F-5622-46DF-8E4D-53559191612B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "subscriptions", "subscriptions\subscriptions.vcproj", "{A37005B8-46A1-4399-B33D-6F6388E81B48}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcp", "tcp\tcp.vcproj", "{44EDAF5D-D838-4C62-8BC5-31BB9EF88D32}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "transactions", "transactions\transactions.vcproj", "{692A2FED-34A6-49B4-81BD-9D0A79F1EFF4}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 13
+		SccProjectName0 = examples
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:ClearCase
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = gizmochat\\gizmochat.vcproj
+		SccProjectName1 = gizmochat
+		SccLocalPath1 = gizmochat
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = encoder\\encoder.vcproj
+		SccProjectName2 = encoder
+		SccLocalPath2 = encoder
+		CanCheckoutShared = false
+		SccProjectUniqueName3 = evaluators\\evaluators.vcproj
+		SccProjectName3 = evaluators
+		SccLocalPath3 = evaluators
+		CanCheckoutShared = false
+		SccProjectUniqueName4 = helloevent\\helloevent.vcproj
+		SccProjectName4 = helloevent
+		SccLocalPath4 = helloevent
+		CanCheckoutShared = false
+		SccProjectUniqueName5 = helloobject\\helloobject.vcproj
+		SccProjectName5 = helloobject
+		SccLocalPath5 = helloobject
+		CanCheckoutShared = false
+		SccProjectUniqueName6 = hierarchy\\hierarchy.vcproj
+		SccProjectName6 = hierarchy
+		SccLocalPath6 = hierarchy
+		CanCheckoutShared = false
+		SccProjectUniqueName7 = main\\main.vcproj
+		SccProjectName7 = main
+		SccLocalPath7 = main
+		CanCheckoutShared = false
+		SccProjectUniqueName8 = ownership\\ownership.vcproj
+		SccProjectName8 = ownership
+		SccLocalPath8 = ownership
+		CanCheckoutShared = false
+		SccProjectUniqueName9 = server\\server.vcproj
+		SccProjectName9 = \u0022$/test/FIA/dmtl+/server\u0022,\u0020EPDCAAAA
+		SccLocalPath9 = server
+		CanCheckoutShared = false
+		SccProjectUniqueName10 = subscriptions\\subscriptions.vcproj
+		SccProjectName10 = subscriptions
+		SccLocalPath10 = subscriptions
+		CanCheckoutShared = false
+		SccProjectUniqueName11 = tcp\\tcp.vcproj
+		SccProjectName11 = tcp
+		SccLocalPath11 = tcp
+		CanCheckoutShared = false
+		SccProjectUniqueName12 = transactions\\transactions.vcproj
+		SccProjectName12 = transactions
+		SccLocalPath12 = transactions
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED3CF572-7C02-46EE-9C02-90C281AD1E91}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ED3CF572-7C02-46EE-9C02-90C281AD1E91}.Debug|Win32.Build.0 = Debug|Win32
+		{ED3CF572-7C02-46EE-9C02-90C281AD1E91}.Release|Win32.ActiveCfg = Release|Win32
+		{ED3CF572-7C02-46EE-9C02-90C281AD1E91}.Release|Win32.Build.0 = Release|Win32
+		{B97A3020-8133-4A89-BB75-C1975D513733}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B97A3020-8133-4A89-BB75-C1975D513733}.Debug|Win32.Build.0 = Debug|Win32
+		{B97A3020-8133-4A89-BB75-C1975D513733}.Release|Win32.ActiveCfg = Release|Win32
+		{B97A3020-8133-4A89-BB75-C1975D513733}.Release|Win32.Build.0 = Release|Win32
+		{2213EAAE-CBDF-4100-966B-0444B40E531D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2213EAAE-CBDF-4100-966B-0444B40E531D}.Debug|Win32.Build.0 = Debug|Win32
+		{2213EAAE-CBDF-4100-966B-0444B40E531D}.Release|Win32.ActiveCfg = Release|Win32
+		{2213EAAE-CBDF-4100-966B-0444B40E531D}.Release|Win32.Build.0 = Release|Win32
+		{54E3D799-1A4C-4027-8E8B-887445CDAAD5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{54E3D799-1A4C-4027-8E8B-887445CDAAD5}.Debug|Win32.Build.0 = Debug|Win32
+		{54E3D799-1A4C-4027-8E8B-887445CDAAD5}.Release|Win32.ActiveCfg = Release|Win32
+		{54E3D799-1A4C-4027-8E8B-887445CDAAD5}.Release|Win32.Build.0 = Release|Win32
+		{6713166B-4A0E-42A5-8352-CA45113F7D8D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6713166B-4A0E-42A5-8352-CA45113F7D8D}.Debug|Win32.Build.0 = Debug|Win32
+		{6713166B-4A0E-42A5-8352-CA45113F7D8D}.Release|Win32.ActiveCfg = Release|Win32
+		{6713166B-4A0E-42A5-8352-CA45113F7D8D}.Release|Win32.Build.0 = Release|Win32
+		{4DB7E7F0-35CC-4430-BBFC-97AB3DB226A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4DB7E7F0-35CC-4430-BBFC-97AB3DB226A8}.Debug|Win32.Build.0 = Debug|Win32
+		{4DB7E7F0-35CC-4430-BBFC-97AB3DB226A8}.Release|Win32.ActiveCfg = Release|Win32
+		{4DB7E7F0-35CC-4430-BBFC-97AB3DB226A8}.Release|Win32.Build.0 = Release|Win32
+		{43506181-A981-42D5-A3FE-AA18C077C757}.Debug|Win32.ActiveCfg = Debug|Win32
+		{43506181-A981-42D5-A3FE-AA18C077C757}.Debug|Win32.Build.0 = Debug|Win32
+		{43506181-A981-42D5-A3FE-AA18C077C757}.Release|Win32.ActiveCfg = Release|Win32
+		{43506181-A981-42D5-A3FE-AA18C077C757}.Release|Win32.Build.0 = Release|Win32
+		{31342E9F-0BD6-4A78-8EC6-803A78FF5FF1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{31342E9F-0BD6-4A78-8EC6-803A78FF5FF1}.Debug|Win32.Build.0 = Debug|Win32
+		{31342E9F-0BD6-4A78-8EC6-803A78FF5FF1}.Release|Win32.ActiveCfg = Release|Win32
+		{31342E9F-0BD6-4A78-8EC6-803A78FF5FF1}.Release|Win32.Build.0 = Release|Win32
+		{94D8A34F-5622-46DF-8E4D-53559191612B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{94D8A34F-5622-46DF-8E4D-53559191612B}.Debug|Win32.Build.0 = Debug|Win32
+		{94D8A34F-5622-46DF-8E4D-53559191612B}.Release|Win32.ActiveCfg = Release|Win32
+		{94D8A34F-5622-46DF-8E4D-53559191612B}.Release|Win32.Build.0 = Release|Win32
+		{A37005B8-46A1-4399-B33D-6F6388E81B48}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A37005B8-46A1-4399-B33D-6F6388E81B48}.Debug|Win32.Build.0 = Debug|Win32
+		{A37005B8-46A1-4399-B33D-6F6388E81B48}.Release|Win32.ActiveCfg = Release|Win32
+		{A37005B8-46A1-4399-B33D-6F6388E81B48}.Release|Win32.Build.0 = Release|Win32
+		{44EDAF5D-D838-4C62-8BC5-31BB9EF88D32}.Debug|Win32.ActiveCfg = Debug|Win32
+		{44EDAF5D-D838-4C62-8BC5-31BB9EF88D32}.Debug|Win32.Build.0 = Debug|Win32
+		{44EDAF5D-D838-4C62-8BC5-31BB9EF88D32}.Release|Win32.ActiveCfg = Release|Win32
+		{44EDAF5D-D838-4C62-8BC5-31BB9EF88D32}.Release|Win32.Build.0 = Release|Win32
+		{692A2FED-34A6-49B4-81BD-9D0A79F1EFF4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{692A2FED-34A6-49B4-81BD-9D0A79F1EFF4}.Debug|Win32.Build.0 = Debug|Win32
+		{692A2FED-34A6-49B4-81BD-9D0A79F1EFF4}.Release|Win32.ActiveCfg = Release|Win32
+		{692A2FED-34A6-49B4-81BD-9D0A79F1EFF4}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
