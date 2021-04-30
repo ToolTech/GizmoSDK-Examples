@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test implementation of serialization
 // Author		: Anders Modén		
-// Product		: Gizmo3D 2.10.9
+// Product		: Gizmo3D 2.11.1
 //		
 //
 //			
@@ -47,33 +47,10 @@ class testSerializeData : public gzSerializeData
 {
 public:
 
-	gzSerializeBinary<long>		longdata;
-	gzSerializeBinary<float>	floatdata;
+	long	longdata;
+	float	floatdata;
 
-
-	gzVoid write(gzSerializeAdapter *adapter)
-	{
-		longdata.write(adapter);
-		floatdata.write(adapter);
-	}
-
-	gzVoid read(gzSerializeAdapter *adapter)
-	{
-		longdata.read(adapter);
-		floatdata.read(adapter);
-	}
-
-	gzVoid pushBack(gzSerializeAdapter *adapter)
-	{
-		floatdata.pushBack(adapter);
-		longdata.pushBack(adapter);
-	}
-
-	gzUInt32 getDataSize(gzSerializeAdapter *adapter=NULL) const
-	{
-		return longdata.getDataSize()+floatdata.getDataSize();
-	}
-
+	GZ_DECLARE_SERIALIZE_2("testSerializeData", longdata, floatdata);
 };
 
 
@@ -97,8 +74,8 @@ int main(int argc , char *argv[] )
 		data2.read(adapter);
 		delete adapter;
 
-		GZMESSAGE(GZ_MESSAGE_DEBUG,"Float data %.3lf",(float)data2.floatdata);
-		GZMESSAGE(GZ_MESSAGE_DEBUG,"Long data %ld",(long)data2.longdata);
+		GZMESSAGE(GZ_MESSAGE_DEBUG,"Float data %.3lf",data2.floatdata);
+		GZMESSAGE(GZ_MESSAGE_DEBUG,"Long data %ld",data2.longdata);
 
 	}
 	catch(gzBaseError &error)	// In case of exceptions thrown we want to print the message

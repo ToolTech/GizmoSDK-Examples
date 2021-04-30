@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app for crossboards. Shows how to make alpha masked trees etc.
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.10.9
+// Product		: Gizmo3D 2.11.1
 //              
 //
 //                      

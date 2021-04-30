@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Interactive material/light editor example
 // Author		: Lisa Johansson
-// Product		: Gizmo3D 2.10.9
+// Product		: Gizmo3D 2.11.1
 //              
 //
 //                      

@@ -20,7 +20,7 @@
 // Description  : Test app to show how to interface qt (minimal app!) or any other
 //				  equal GUI toolkit that exports a window handle.
 // Author		: Anders Modén
-// Product		: Gizmo3D 2.10.9
+// Product		: Gizmo3D 2.11.1
 //
 //
 //

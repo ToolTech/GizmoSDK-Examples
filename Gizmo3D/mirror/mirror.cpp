@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app for a mirror sample
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.10.9
+// Product		: Gizmo3D 2.11.1
 //              
 //
 //                      
