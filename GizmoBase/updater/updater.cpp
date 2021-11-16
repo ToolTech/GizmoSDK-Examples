@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Updates files
 // Author		: Anders Modén		
-// Product		: Gizmo3D 2.11.1
+// Product		: Gizmo3D 2.11.48
 //		
 //
 //			
@@ -76,11 +76,11 @@ int main(int argc , char *argv[] )
 		if(args.hasOption("debug"))
 			gzMessage::setMessageLevel(GZ_MESSAGE_DEBUG | GZ_MESSAGE_API_INTERNAL);
 
-		gzString purl = args.getOptionValue("purl", "maps");
+		gzString purl = args.getOptionValue("purl", "maps");			// Default to "maps" purl
 
 		gzString nic = args.getOptionValue("nic", getLocalHostAddress().asString());
 
-		gzString destPath = args.getOptionValue("dest", "c:/service");
+		gzString destPath = args.getOptionValue("dest", "./");			// Default to current directory
 
 		copyFile(purl, nic, "SceneBuilder", "gzBase64.dll", destPath,TRUE);
 		copyFile(purl, nic, "SceneBuilder", "SceneBuilderClient64.exe", destPath,TRUE);

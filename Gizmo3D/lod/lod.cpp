@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app for a sample lod
 // Author		: Lisa Johansson          
-// Product		: Gizmo3D 2.11.1
+// Product		: Gizmo3D 2.11.48
 //              
 //
 //                      

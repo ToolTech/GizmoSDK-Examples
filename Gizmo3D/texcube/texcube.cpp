@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app for textured cubes showing state management
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.1
+// Product		: Gizmo3D 2.11.48
 //              
 //
 //                      

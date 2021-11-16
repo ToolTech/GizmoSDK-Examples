@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app to show geometry shader usage
 // Author		: Anders ModÈn          
-// Product		: Gizmo3D 2.11.1
+// Product		: Gizmo3D 2.11.48
 //              
 // Copyright © 2003- Saab Training Systems AB, Sweden	
 //                      

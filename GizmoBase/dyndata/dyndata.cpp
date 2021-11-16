@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Example of dynamic data in GizmoBase
 // Author		: Anders Modén		
-// Product		: GizmoBase 2.11.1
+// Product		: GizmoBase 2.11.48
 //		
 //
 //			

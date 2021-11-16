@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GizmoBase" Version="2.10.9.1" />
+    <PackageReference Include="GizmoBase" Version="2.11.48.1" />
   </ItemGroup>
 
 </Project>

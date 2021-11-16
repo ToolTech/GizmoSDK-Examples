@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: An example of prioritized notifications
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.1
+// Product		: Gizmo3D 2.11.48
 //              
 //
 //                      

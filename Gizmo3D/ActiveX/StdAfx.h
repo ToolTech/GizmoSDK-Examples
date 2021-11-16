@@ -21,7 +21,7 @@
 //				  or project specific include files that are used frequently,
 //				  but are changed infrequently
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.1
+// Product		: Gizmo3D 2.11.48
 //              
 //
 //                      

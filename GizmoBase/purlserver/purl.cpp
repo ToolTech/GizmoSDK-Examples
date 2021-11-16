@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Starts a pipe url server
 // Author		: Anders Modén		
-// Product		: Gizmo3D 2.11.1
+// Product		: Gizmo3D 2.11.48
 //		
 //
 //			
@@ -62,7 +62,7 @@ int main(int argc , char *argv[] )
 
 		gzArgumentParser args(argc, argv);
 
-		args.setSyntaxString("<pipename> {-logg} {-debug} {-absolute} {-write} {-urlbases <base;base>} {-options <optionstring>} {-base <base path>}");
+		args.setSyntaxString("<pipename> {-logg} {-debug} {-absolute} {-write} {-urlbases <base;base>} {-options <optionstring>} {-base <base path>} {-plugins <a;b;c>}");
 
 		if(args.hasOption("debug"))
 			gzMessage::setMessageLevel(GZ_MESSAGE_DEBUG | GZ_MESSAGE_API_INTERNAL);
@@ -77,7 +77,7 @@ int main(int argc , char *argv[] )
 
 		args.checkArgumentCount(2);
 		
-		GZMESSAGE(GZ_MESSAGE_NOTICE, "* Starting purl:%s %s\tVersion:%f", args.getArgument(1),options, GZ_PURL_PROTOCOL_VERSION/100.0);
+		GZMESSAGE(GZ_MESSAGE_NOTICE, "* Starting purl:%s %s\tProtocol:%d\tGizmoSDK:%s", args.getArgument(1),options, GZ_PURL_PROTOCOL_VERSION, GZ_VERSION_STR);
 
 		gzPipeURLServer server(args.getArgument(1),options);
 

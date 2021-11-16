@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "datagen", "datagen.vcxproj", "{6FED2466-DC1B-456A-8602-1BCF28DD3141}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\..\ws\vs12\GizmoBase\zlib\zlib.vcxproj", "{B8E91F65-5E6E-4013-AD6F-DAF3E4319400}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\..\ws\vs16\GizmoBase\zlib\zlib.vcxproj", "{B8E91F65-5E6E-4013-AD6F-DAF3E4319400}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "minizip", "..\..\ws\vs12\GizmoBase\minizip\minizip.vcxproj", "{C1BB3690-B29C-3392-41CA-B813FA11A1F6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "minizip", "..\..\ws\vs16\GizmoBase\minizip\minizip.vcxproj", "{C1BB3690-B29C-3392-41CA-B813FA11A1F6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gzBase", "..\..\ws\vs12\GizmoBase\gzBase\gzBase.vcxproj", "{B3DE8DD2-5EF3-4768-96D7-24320E9CD01E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gzBase", "..\..\ws\vs16\GizmoBase\gzBase\gzBase.vcxproj", "{B3DE8DD2-5EF3-4768-96D7-24320E9CD01E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,7 +59,8 @@ Global
 		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Debug_Profile|x64.ActiveCfg = Debug|Win32
 		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Debug|Win32.ActiveCfg = Debug|Win32
 		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Debug|Win32.Build.0 = Debug|Win32
-		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Debug|x64.ActiveCfg = Debug|Win32
+		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Debug|x64.ActiveCfg = Debug|x64
+		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Debug|x64.Build.0 = Debug|x64
 		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Release_lib_s_ext|Win32.ActiveCfg = Release|Win32
 		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Release_lib_s_ext|Win32.Build.0 = Release|Win32
 		{6FED2466-DC1B-456A-8602-1BCF28DD3141}.Release_lib_s_ext|x64.ActiveCfg = Release|Win32
@@ -222,6 +223,34 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {516CC4E9-2388-44FB-900B-B80365832B71}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://devops.saab.se/ts
+		SccProjectUniqueName0 = datagen.vcxproj
+		SccProjectName0 = .
+		SccAuxPath0 = https://devops.saab.se/ts
+		SccLocalPath0 = .
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\..\\ws\\vs16\\GizmoBase\\zlib\\zlib.vcxproj
+		SccProjectName1 = ../../ws/vs16/GizmoBase/zlib
+		SccAuxPath1 = https://devops.saab.se/ts
+		SccLocalPath1 = ..\\..\\ws\\vs16\\GizmoBase\\zlib
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = ..\\..\\ws\\vs16\\GizmoBase\\minizip\\minizip.vcxproj
+		SccProjectName2 = ../../ws/vs16/GizmoBase/minizip
+		SccAuxPath2 = https://devops.saab.se/ts
+		SccLocalPath2 = ..\\..\\ws\\vs16\\GizmoBase\\minizip
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = ..\\..\\ws\\vs16\\GizmoBase\\gzBase\\gzBase.vcxproj
+		SccProjectName3 = ../../ws/vs16/GizmoBase/gzBase
+		SccAuxPath3 = https://devops.saab.se/ts
+		SccLocalPath3 = ..\\..\\ws\\vs16\\GizmoBase\\gzBase
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 	EndGlobalSection
 	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
 		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
