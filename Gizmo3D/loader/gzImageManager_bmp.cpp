@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Class implementation of the bmp format reader
 // Author		: Anders Modén		
-// Product		: Gizmo3D 2.11.48
+// Product		: Gizmo3D 2.11.70
 //		
 //
 //			

@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Example of different allocations
 // Author		: Anders Modén		
-// Product		: Coordinate 2.11.48
+// Product		: Coordinate 2.11.70
 //		
 //
 //			

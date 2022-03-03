@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Example of specialised rtti in GizmoBase
 // Author		: Anders Modén		
-// Product		: GizmoBase 2.11.48
+// Product		: GizmoBase 2.11.70
 //		
 //
 //			

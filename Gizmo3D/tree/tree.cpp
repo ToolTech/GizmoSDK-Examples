@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app for recursive tree sample
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.48
+// Product		: Gizmo3D 2.11.70
 //              
 //
 //                      

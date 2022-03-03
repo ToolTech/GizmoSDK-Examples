@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app for image rendering to a texture
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.48
+// Product		: Gizmo3D 2.11.70
 //              
 //
 //                      

@@ -18,7 +18,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\allocation\allocation.cpp">
+    <ClCompile Include="..\..\..\..\Serialize\serialize.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

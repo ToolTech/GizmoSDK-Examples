@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test implementation of messaging
 // Author		: Anders Modén		
-// Product		: Gizmo3D 2.11.48
+// Product		: Gizmo3D 2.11.70
 //		
 //
 //			

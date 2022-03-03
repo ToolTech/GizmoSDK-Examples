@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: An example of running threads
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.48
+// Product		: Gizmo3D 2.11.70
 //              
 //
 //                      

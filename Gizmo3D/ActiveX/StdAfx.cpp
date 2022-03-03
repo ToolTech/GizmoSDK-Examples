@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: source file that includes just the standard includes
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.48
+// Product		: Gizmo3D 2.11.70
 //              
 //
 //                      
