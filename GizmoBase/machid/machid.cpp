@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Generates machine id for GIZMO license
 // Author		: Anders Modén		
-// Product		: GizmoBase 2.11.70
+// Product		: GizmoBase 2.11.76
 //		
 //
 //			

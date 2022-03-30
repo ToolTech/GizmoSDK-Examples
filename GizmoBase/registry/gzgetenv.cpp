@@ -19,7 +19,7 @@
 // Module		:
 // Description	: Example that creates a getenv command for GizmoSDK registry
 // Author		: Anders Modén
-// Product		: GizmoBase 2.11.70
+// Product		: GizmoBase 2.11.76
 //
 //
 //

@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test implementation of how to use the observer notifier pattern
 // Author		: Anders Modén		
-// Product		: Gizmo3D 2.11.70
+// Product		: Gizmo3D 2.11.76
 //		
 //
 //			

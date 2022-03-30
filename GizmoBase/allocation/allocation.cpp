@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Example of different allocations
 // Author		: Anders Modén		
-// Product		: GizmoBase 2.11.70
+// Product		: GizmoBase 2.11.76
 //		
 //
 //			

@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app to show shader usage
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.70
+// Product		: Gizmo3D 2.11.76
 //              
 //
 //                      
