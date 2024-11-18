@@ -15,27 +15,24 @@
 // Export Control:		NOT EXPORT CONTROLLED
 //
 //
-// File			: smartpointer.cpp
+// File			: serialize.cpp
 // Module		: 
-// Description	: An example of smart pointers for memory management
-// Author		: Anders Moden          
-// Product		: Gizmo3D 2.12.199
-//              
-//
-//                      
-// NOTE:	The GIZMO package defines a general purpose API for large model
-//			visualisation and advanced graphic behaviours. The package is similar
-//			to Cosmo3D, Inventor, Performer etc. but adds automated behaviour
-//			patterns to the graphics. 
+// Description	: Test implementation of serialization
+// Author		: Anders Modén		
+// Product		: GizmoBase 2.12.199
+//		
+// NOTE:	GizmoBase is a platform abstraction utility layer for C++. It contains 
+//			design patterns and C++ solutions for the advanced programmer.
 //
 //
-// Revision History...                                                  
-//                                                                      
-// Who  Date    Description                                             
-//                                                                      
-// AMO  020227  Created file  
+// Revision History...							
+//									
+// Who	Date	Description						
+//									
+// AMO	990919	Created file 	
 //
 // ******************************************************************************
+
 #define GZ_MEM_DEBUG	// Before all includes !
 
 #include "gzBaseLibrary.h"
@@ -59,7 +56,7 @@ public:
 	
 };
 
-GZ_DECLARE_REFPTR(MyRefData);	// Add a smartp ointer declaration
+GZ_DECLARE_REFPTR(MyRefData);	// Add a smart-pointer declaration
 
 class MyData 
 {
@@ -83,10 +80,15 @@ int main(int argc , char *argv[] )
 {
 	try
 	{
-		gzMessage::setMessageLevel(GZ_MESSAGE_MEM_DEBUG);
-		
+		// Adjust the level so we get output from memory traces
+		gzMessage::setMessageLevel(GZ_MESSAGE_MEM_DEBUG| GZ_MESSAGE_API_INTERNAL);
+
+		// Enable trace of allocation
 		gzMemoryControl::traceAlloc(TRUE);
-	
+
+		// Initiate a memory allocation block so we can count allocations
+		gzMemoryControl::dumpAllocMem();
+					
 		// Create a reference "smart" pointer to the class
 		MyRefDataPtr pMyRefData;
 	
@@ -94,8 +96,6 @@ int main(int argc , char *argv[] )
 		pMyRefData = new MyRefData;
 		
 		pMyRefData->nisse=10;
-
-		//delete pMyRefData;
 		
 		// And some non referenced managed data, use RefData
 		
@@ -107,9 +107,7 @@ int main(int argc , char *argv[] )
 		
 		// No Need to clean up data. It is all managed by the RefPointers
 
-		// Note that there are some default memory caches that need to be cleared
 
-		//gzRecycleData_gzBase<gzString::disable();
 	}
 	catch(gzBaseError &error)
 	{
@@ -118,6 +116,8 @@ int main(int argc , char *argv[] )
 	catch(...)
 	{
 	}
+
+	gzMemoryControl::dumpAllocMem();
 
 	return 0;
 }
