@@ -19,14 +19,10 @@
 // Module		: 
 // Description	: An example of string append and serialization
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.76
+// Product		: GizmoBase 2.12.199
 //              
-//
-//                      
-// NOTE:	The GIZMO package defines a general purpose API for large model
-//			visualisation and advanced graphic behaviours. The package is similar
-//			to Cosmo3D, Inventor, Performer etc. but adds automated behaviour
-//			patterns to the graphics. 
+// NOTE:	GizmoBase is a platform abstraction utility layer for C++. It contains 
+//			design patterns and C++ solutions for the advanced programmer.
 //
 //
 // Revision History...                                                  

@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test implementation of messaging
 // Author		: Anders Modén		
-// Product		: Gizmo3D 2.11.76
+// Product		: Gizmo3D 2.12.199
 //		
 //
 //			
@@ -34,11 +34,22 @@
 // Who	Date	Description						
 //									
 // AMO	010910	Created file 	
+// AMO	230309	Updated example to help converting to .gzd and .gzl files	(2.12.67)
 //
 // ******************************************************************************
 #include "gzGizmo3DLibrary.h"
 
-#include <iostream>
+const char syntax[] =
+"'infileURL' 'outfileURL' {-optimize} {-plugins <a;b;c>} {-config cfg_url} {-loadflags nn} {-saveflags nn} {-optimizeflags nn} {-exclude aa;bb;cc}\n"	\
+"\t-optimize		: Run NodeOptimizer before file is saved\n"				\
+"\t-plugins			: Load list of plugins before converting\n"				\
+"\t-config			: Load xml config into registry\n"						\
+"\t-saveflags		: set of gzSerializeAdapterFlags for saving\n"			\
+"\t-loadflags		: set of gzSerializeAdapterFlags for loading\n"			\
+"\t-optimizeflags   : set of gzNodeOptimizeLevel for optimizing\n"			\
+"\t-exclude			: list of nodenames to be excluded from opt\n"			\
+"\t-path			: list of paths to be added\n"							\
+;
 
 int main(int argc , char *argv[] )
 {
@@ -46,30 +57,79 @@ int main(int argc , char *argv[] )
 
 	try		// To catch all Gizmo3D exceptions
 	{
-		if((argc!=3) && (argc!=4) && (argc!=5))
+		gzArgumentParser args(argc, argv);
+
+		args.setSyntaxString(syntax);
+		args.exitOnError();
+				
+		if(args.hasOption("debug"))
+			gzMessage::setMessageLevel(GZ_MESSAGE_DEBUG|GZ_MESSAGE_API_INTERNAL);
+
+		gzString config_url = args.getOptionValue("config", GZ_EMPTY_STRING);
+
+		if (config_url.length())
+			gzKeyDatabase::setLocalRegistry(config_url);
+
+		gzString path= args.getOptionValue("path", GZ_EMPTY_STRING);
+
+		if (path.length())
 		{
-			std::cout<<"Syntax: gzconv [infile] [outfile] {loadflags=0} {saveflags=0}"<<std::endl;
-			exit(0);
+			gzString currentPath = gzKeyDatabase::getUserKey("GIZMO_PATH");
+
+			gzString newPath = gzString::formatString("%s;%s", path, currentPath);
+
+			gzPutEnv("GIZMO_PATH", newPath);
 		}
 
-		gzInt32 loadflags=0,saveflags=0;
-
-		if(argc>=4)
-			loadflags=atol(argv[3]);
-
-		if(argc==5)
-			saveflags=atol(argv[4]);
-
-		gzMessage::setMessageLevel(GZ_MESSAGE_DEBUG);
-
+		gzInitializeImageManagers();
 		gzInitializeDbManagers();
 
-		gzModule::loadModules();
 
-		gzNode *node=gzDbManager::loadDB(argv[1],GZ_EVALUATE_EXTENSION , GZ_DB_FLAGS_DEFAULT, loadflags);
+		gzInt32 loadflags		= args.getOptionValue("loadflags", gzKeyDatabase::getDefaultUserKey("gzConv/loadflags", GZ_DB_FLAGS_FLIP_FLIPPED_IMAGES)).num32();
+		gzInt32 saveflags		= args.getOptionValue("saveflags", gzKeyDatabase::getDefaultUserKey("gzConv/saveflags", GZ_DB_FLAGS_DEFAULT)).num32();
 
-		if(node)
-			gzDbManager::saveDB(node , argv[2] , GZ_EVALUATE_EXTENSION , GZ_DB_FLAGS_DEFAULT, saveflags );
+		gzString plugins		= args.getOptionValue("plugins",gzKeyDatabase::getUserKey("gzConv/plugins"));
+		gzString excludedNodes	= args.getOptionValue("exclude", gzKeyDatabase::getUserKey("gzConv/exclude"));
+
+		gzNodeOptimizeLevel level = (gzNodeOptimizeLevel)args.getOptionValue("optimizeflags", gzKeyDatabase::getDefaultUserKey("gzConv/optimizeflags", GZ_NODE_OPTIMIZE_DEFAULT)).num32();
+
+		if (plugins.length())
+			gzModule::loadModules(plugins, FALSE, TRUE, TRUE);
+
+		args.checkArgumentCount(3);
+
+		gzNodePtr node=gzDbManager::loadDB(args.getArgument(1),GZ_EVALUATE_EXTENSION ,loadflags);
+
+		if (node)
+		{
+			gzDbInfoStatusBits status;
+
+			if (gzDynamic_Cast(gzGetNodeDbInfo(node, GZ_DB_INFO_STATUS), status))
+			{
+				if (status & GZ_DB_INFO_STATUS_MISSING_TEXTURE)
+					printf("Detected Missing Texture\n");
+
+				if (status & GZ_DB_INFO_STATUS_UNKNOW_DATA)
+					printf("Detected Unknown Data\n");
+			}
+
+			if (args.hasOption("optimize"))
+			{
+				gzNodeOptimizer optimizer;
+
+				optimizer.exclude(excludedNodes);
+
+				node = optimizer.optimize(node,level);
+			}
+
+			if (node)
+			{
+				if (!gzDbManager::saveDB(node, args.getArgument(2), GZ_EVALUATE_EXTENSION, saveflags))
+					printf("!!!! Failed to save '%s'  !!!!\n", (const char*)args.getArgument(2));
+				else
+					printf("Ok! Saved '%s'\n", (const char *)args.getArgument(2));
+			}
+		}
 
 	}
 	catch(gzBaseError &error)	// In case of exceptions thrown we want to print the message
@@ -78,6 +138,8 @@ int main(int argc , char *argv[] )
 	}
 
 	gzShutDownGizmo();
+
+	gzPutEnv("GIZMO_PATH", GZ_EMPTY_STRING);	// Clean path
 
 	return 0;
 }

@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Updates files
 // Author		: Anders Modén		
-// Product		: Gizmo3D 2.11.76
+// Product		: Gizmo3D 2.12.199
 //		
 //
 //			
@@ -46,7 +46,12 @@ gzBool copyFile(const gzString& purl, const gzString &nic,const gzString& source
 	if (!overWrite && gzFileExist(destFileName))
 		return TRUE;
 
-	gzSerializeAdapterPtr from = gzSerializeAdapter::getURLAdapter(gzString::formatString("purl:%s?nic=%s,%s/%s", purl, nic,sourcePath, fileName));
+	gzSerializeAdapterPtr from;
+	
+	if(nic.length())
+		from = gzSerializeAdapter::getURLAdapter(gzString::formatString("purl:%s?nic=%s,%s/%s", purl, nic, sourcePath, fileName));
+	else
+		from = gzSerializeAdapter::getURLAdapter(gzString::formatString("purl:%s,%s/%s", purl, sourcePath, fileName));
 
 	if (!from)
 		return FALSE;
@@ -78,12 +83,14 @@ int main(int argc , char *argv[] )
 
 		gzString purl = args.getOptionValue("purl", "maps");			// Default to "maps" purl
 
-		gzString nic = args.getOptionValue("nic", getLocalHostAddress().asString());
+		gzString nic = gzRegKeyExpandedString(args.getOptionValue("nic", "${%SBCIF%}"));
 
 		gzString destPath = args.getOptionValue("dest", "./");			// Default to current directory
 
 		copyFile(purl, nic, "SceneBuilder", "gzBase64.dll", destPath,TRUE);
+		copyFile(purl, nic, "SceneBuilder", "gzBase64.pdb", destPath, TRUE);
 		copyFile(purl, nic, "SceneBuilder", "SceneBuilderClient64.exe", destPath,TRUE);
+		copyFile(purl, nic, "SceneBuilder", "SceneBuilderClient64.pdb", destPath, TRUE);
 		copyFile(purl, nic, "SceneBuilder", "run_me_as_admin.bat", destPath,FALSE);
 		copyFile(purl, nic, "SceneBuilder", "SceneBuilderClient.xml", destPath,FALSE);
 		copyFile(purl, nic, "SceneBuilder", "vcruntime140.dll", destPath,FALSE);

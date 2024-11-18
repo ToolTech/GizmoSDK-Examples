@@ -19,10 +19,8 @@
 // Module		: 
 // Description	: Example of different allocations
 // Author		: Anders Modén		
-// Product		: GizmoBase 2.11.76
+// Product		: GizmoBase 2.12.199
 //		
-//
-//			
 // NOTE:	GizmoBase is a platform abstraction utility layer for C++. It contains 
 //			design patterns and C++ solutions for the advanced programmer.
 //

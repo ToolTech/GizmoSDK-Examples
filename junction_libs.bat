@@ -9,6 +9,11 @@ if not defined GIZMOSDK (
 
 rem ----- Link in Gizmo Examples -------------------------------------------------
 
+rmdir /S /Q GizmoBase
+rmdir /S /Q GizmoDistribution
+rmdir /S /Q Gizmo3D
+rmdir /S /Q Coordinate
+
 mklink /J GizmoBase %GIZMOSDK%\GizmoBase\examples
 mklink /J GizmoDistribution %GIZMOSDK%\GizmoDistribution\examples
 mklink /J Gizmo3D %GIZMOSDK%\Gizmo3D\examples

@@ -19,7 +19,7 @@
 // Module		:
 // Description	: Example that creates a setenv command for GizmoSDK registry
 // Author		: Anders Modén
-// Product		: GizmoBase 2.11.76
+// Product		: GizmoBase 2.12.199
 //
 //
 //

@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Example of different allocations
 // Author		: Anders Modén		
-// Product		: Coordinate 2.11.76
+// Product		: Coordinate 2.12.199
 //		
 //
 //			
@@ -31,7 +31,7 @@
 //									
 // Who	Date	Description						
 //									
-// AMO	210330	Created file        (2.10.9) 	
+// AMO	210330	Created file                        (2.10.9) 	
 //
 // ******************************************************************************
 

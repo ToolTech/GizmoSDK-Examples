@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Test app for network communication
 // Author		: Anders Modén          
-// Product		: GizmoBase 2.11.76
+// Product		: GizmoBase 2.12.199
 //              
 //
 //                      

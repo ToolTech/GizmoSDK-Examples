@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: An example of smart pointers for memory management
 // Author		: Anders Moden          
-// Product		: Gizmo3D 2.11.76
+// Product		: Gizmo3D 2.12.199
 //              
 //
 //                      

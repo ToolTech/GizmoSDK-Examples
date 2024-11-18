@@ -1,33 +1,25 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gzconv", "gzconv.vcproj", "{D224C5E8-CE4A-4E69-B810-83B2D777BFBC}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33130.400
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gzConv", "gzConv.vcxproj", "{FA62D437-AF45-4BC6-8F21-9B7D9B4579CF}"
 EndProject
 Global
-	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
-		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
-	EndGlobalSection
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 2
-		SccProjectUniqueName0 = gzconv.vcproj
-		SccLocalPath0 = .
-		CanCheckoutShared = true
-		SccProjectName1 = \u0022$/examples/messages\u0022,\u0020FNAAAAAA
-		SccLocalPath1 = .
-		SccProvider1 = MSSCCI:ClearCase
-		CanCheckoutShared = true
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D224C5E8-CE4A-4E69-B810-83B2D777BFBC}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D224C5E8-CE4A-4E69-B810-83B2D777BFBC}.Debug|Win32.Build.0 = Debug|Win32
-		{D224C5E8-CE4A-4E69-B810-83B2D777BFBC}.Release|Win32.ActiveCfg = Release|Win32
-		{D224C5E8-CE4A-4E69-B810-83B2D777BFBC}.Release|Win32.Build.0 = Release|Win32
+		{FA62D437-AF45-4BC6-8F21-9B7D9B4579CF}.Debug|x64.ActiveCfg = Debug|x64
+		{FA62D437-AF45-4BC6-8F21-9B7D9B4579CF}.Debug|x64.Build.0 = Debug|x64
+		{FA62D437-AF45-4BC6-8F21-9B7D9B4579CF}.Release|x64.ActiveCfg = Release|x64
+		{FA62D437-AF45-4BC6-8F21-9B7D9B4579CF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDE0758F-42FE-40B0-9486-B332AD338E51}
 	EndGlobalSection
 EndGlobal

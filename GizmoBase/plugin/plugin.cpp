@@ -19,14 +19,11 @@
 // Module		: 
 // Description	: A sample plugin module
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.76
+// Product		: GizmoBase 2.12.199
 //              
 //
-//                      
-// NOTE:	The GIZMO package defines a general purpose API for large model
-//			visualisation and advanced graphic behaviours. The package is similar
-//			to Cosmo3D, Inventor, Performer etc. but adds automated behaviour
-//			patterns to the graphics. 
+// NOTE:	GizmoBase is a platform abstraction utility layer for C++. It contains 
+//			design patterns and C++ solutions for the advanced programmer.
 //
 //
 // Revision History...                                                  
@@ -63,7 +60,7 @@ public:
 		{
 			case GZ_MODULE_ADD:
 				GZMESSAGE(GZ_MESSAGE_DEBUG,"Loading Plugin Module");
-                m_data.m_member=LL(6806012537);
+                m_data.m_member=LL(406806012537);
 				break;
 
 			case GZ_MODULE_REMOVE:

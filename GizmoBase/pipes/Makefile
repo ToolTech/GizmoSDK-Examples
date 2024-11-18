@@ -5,6 +5,6 @@ sinclude compilerflags
 
 NAME = pipes
 
-FILES = main.o  
+FILES = pipes.o  
 
 sinclude ../Makefile.inc

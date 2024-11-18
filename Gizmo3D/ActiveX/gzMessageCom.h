@@ -19,7 +19,7 @@
 // Module		: 
 // Description	: Declaration of the CgzMessageCom
 // Author		: Anders Modén          
-// Product		: Gizmo3D 2.11.76
+// Product		: Gizmo3D 2.12.199
 //              
 //
 //                      

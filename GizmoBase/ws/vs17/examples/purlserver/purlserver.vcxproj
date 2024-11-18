@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\gzSystem.2.12.199.1\build\gzSystem.props" Condition="Exists('packages\gzSystem.2.12.199.1\build\gzSystem.props')" />
+  <Import Project="packages\gzDb.2.12.199.1\build\gzDb.props" Condition="Exists('packages\gzDb.2.12.199.1\build\gzDb.props')" />
+  <Import Project="packages\gzImage.2.12.199.1\build\gzImage.props" Condition="Exists('packages\gzImage.2.12.199.1\build\gzImage.props')" />
+  <Import Project="packages\gzGraph.2.12.199.1\build\gzGraph.props" Condition="Exists('packages\gzGraph.2.12.199.1\build\gzGraph.props')" />
+  <Import Project="packages\gzCoordinate.2.12.199.1\build\gzCoordinate.props" Condition="Exists('packages\gzCoordinate.2.12.199.1\build\gzCoordinate.props')" />
+  <Import Project="packages\gzBase.2.12.199.1\build\gzBase.props" Condition="Exists('packages\gzBase.2.12.199.1\build\gzBase.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d404b19e-84f7-4e95-969b-35493453626e}</ProjectGuid>
+    <RootNamespace>purlserver</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>PurlServer</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)64_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>$(ProjectName)64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="x64\Debug\PurlServer.xml">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\gzBase.2.12.199.1\build\gzBase.targets" Condition="Exists('packages\gzBase.2.12.199.1\build\gzBase.targets')" />
+    <Import Project="packages\PurlServer.2.12.199.2\build\PurlServer.targets" Condition="Exists('packages\PurlServer.2.12.199.2\build\PurlServer.targets')" />
+    <Import Project="packages\gzCoordinate.2.12.199.1\build\gzCoordinate.targets" Condition="Exists('packages\gzCoordinate.2.12.199.1\build\gzCoordinate.targets')" />
+    <Import Project="packages\gzAltitude.2.12.199.1\build\gzAltitude.targets" Condition="Exists('packages\gzAltitude.2.12.199.1\build\gzAltitude.targets')" />
+    <Import Project="packages\gzGraph.2.12.199.1\build\gzGraph.targets" Condition="Exists('packages\gzGraph.2.12.199.1\build\gzGraph.targets')" />
+    <Import Project="packages\gzImage.2.12.199.1\build\gzImage.targets" Condition="Exists('packages\gzImage.2.12.199.1\build\gzImage.targets')" />
+    <Import Project="packages\gzDb.2.12.199.1\build\gzDb.targets" Condition="Exists('packages\gzDb.2.12.199.1\build\gzDb.targets')" />
+    <Import Project="packages\gzSystem.2.12.199.1\build\gzSystem.targets" Condition="Exists('packages\gzSystem.2.12.199.1\build\gzSystem.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\gzBase.2.12.199.1\build\gzBase.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzBase.2.12.199.1\build\gzBase.props'))" />
+    <Error Condition="!Exists('packages\gzBase.2.12.199.1\build\gzBase.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzBase.2.12.199.1\build\gzBase.targets'))" />
+    <Error Condition="!Exists('packages\PurlServer.2.12.199.2\build\PurlServer.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PurlServer.2.12.199.2\build\PurlServer.targets'))" />
+    <Error Condition="!Exists('packages\gzCoordinate.2.12.199.1\build\gzCoordinate.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzCoordinate.2.12.199.1\build\gzCoordinate.props'))" />
+    <Error Condition="!Exists('packages\gzCoordinate.2.12.199.1\build\gzCoordinate.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzCoordinate.2.12.199.1\build\gzCoordinate.targets'))" />
+    <Error Condition="!Exists('packages\gzAltitude.2.12.199.1\build\gzAltitude.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzAltitude.2.12.199.1\build\gzAltitude.targets'))" />
+    <Error Condition="!Exists('packages\gzGraph.2.12.199.1\build\gzGraph.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzGraph.2.12.199.1\build\gzGraph.props'))" />
+    <Error Condition="!Exists('packages\gzGraph.2.12.199.1\build\gzGraph.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzGraph.2.12.199.1\build\gzGraph.targets'))" />
+    <Error Condition="!Exists('packages\gzImage.2.12.199.1\build\gzImage.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzImage.2.12.199.1\build\gzImage.props'))" />
+    <Error Condition="!Exists('packages\gzImage.2.12.199.1\build\gzImage.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzImage.2.12.199.1\build\gzImage.targets'))" />
+    <Error Condition="!Exists('packages\gzDb.2.12.199.1\build\gzDb.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzDb.2.12.199.1\build\gzDb.props'))" />
+    <Error Condition="!Exists('packages\gzDb.2.12.199.1\build\gzDb.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzDb.2.12.199.1\build\gzDb.targets'))" />
+    <Error Condition="!Exists('packages\gzSystem.2.12.199.1\build\gzSystem.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzSystem.2.12.199.1\build\gzSystem.props'))" />
+    <Error Condition="!Exists('packages\gzSystem.2.12.199.1\build\gzSystem.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\gzSystem.2.12.199.1\build\gzSystem.targets'))" />
+  </Target>
+</Project>

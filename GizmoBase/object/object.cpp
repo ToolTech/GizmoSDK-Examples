@@ -19,14 +19,11 @@
 // Module		: 
 // Description	: Example of gzObject in GizmoBase
 // Author		: Anders Modén		
-// Product		: GizmoBase 2.11.76
+// Product		: GizmoBase 2.12.199
 //		
 //
-//			
-// NOTE:	The GIZMO package defines a general purpose API for large model
-//			visualisation and advanced graphic behaviours. The package is similar
-//			to Cosmo3D, Inventor, Performer etc. but adds automated behaviour
-//			patterns to the graphics. 
+// NOTE:	GizmoBase is a platform abstraction utility layer for C++. It contains 
+//			design patterns and C++ solutions for the advanced programmer.
 //
 //
 // Revision History...							
@@ -45,6 +42,7 @@ public:
 	GZ_DECLARE_TYPE_INTERFACE;
 
 	MyObjectClass(const gzString &name=GZ_EMPTY_STRING):gzNameInterface(name){};
+
 	virtual ~MyObjectClass()
 	{
 		removeAllUserData();
@@ -133,24 +131,24 @@ int main(int argc , char *argv[] )
 			attribs->setAttribute("Name",gzString("Anders"));
 
 
-			gzSerializeAdapter *adapter=gzSerializeAdapter::getURLAdapter("test.dat",GZ_SERIALIZE_OUTPUT);
+			gzSerializeAdapterPtr adapter=gzSerializeAdapter::getURLAdapter("test.dat",GZ_SERIALIZE_OUTPUT);
 
 			if(adapter)
 			{
 				gzObject::writeObject(pObject,adapter);
-				delete adapter;
+				adapter=nullptr;
 			}
 		}
 
 
 
 
-		gzSerializeAdapter *adapter=gzSerializeAdapter::getURLAdapter("test.dat");
+		gzSerializeAdapterPtr adapter=gzSerializeAdapter::getURLAdapter("test.dat");
 
 		if(adapter)
 		{
 			pObject=gzDynamic_Cast<MyObjectClass>(gzObject::readObject(adapter));
-			delete adapter;
+			adapter=nullptr;
 		}
 
 		if(pObject)
