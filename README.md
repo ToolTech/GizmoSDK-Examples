@@ -9,8 +9,8 @@ You will find workspaces and solutions for various platforms under ws/xx where x
 
 Solutions:
 
-ws/vs16 - Visual Studio 2019
-ws/vs17 - Visual Studio 2022
+* ws/vs16 - Visual Studio 2019
+* ws/vs17 - Visual Studio 2022
 
 
 
